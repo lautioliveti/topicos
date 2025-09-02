@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1756151383 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\fecha\fecha.c
+	"fecha.h"
+
+1756150797 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\fecha\fecha.h
+	<stdbool.h>
+	<stdio.h>
+
