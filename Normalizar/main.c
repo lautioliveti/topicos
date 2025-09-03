@@ -4,9 +4,10 @@
 
 #define TAM 101
 
-char* normalizar(const char* cadOrig, char* cadDest);
+char* normalizar(const char* cadOrigin, char* cadDest);
+// Normalizar.exe "*(&)( ))_+cAdeNa$%^# %^a$%^ $%^noRMalIzAR!#$%@#"
 
-int main()
+int main(int argc, char* argv[])
 {
     char cadNormalizada[TAM];
 
@@ -20,7 +21,7 @@ int main()
 char* normalizar(const char* cadOrigin, char* cadDest)
 {
     SecPal secLect, secEscr;
-    secPalCrear(&secLect, cadOrig);
+    secPalCrear(&secLect, (char*)cadOrigin); // casteo para no mandarlo como constante
     secPalCrear(&secEscr, cadDest);
 
     Palabra pal;
@@ -28,10 +29,12 @@ char* normalizar(const char* cadOrigin, char* cadDest)
 
     while(!secPalFin(&secLect))
     {
-        palabraATitulo(&pal);
+        palabraTitulo(&pal);
         secPalEscribir(&secEscr, &pal);
-        secPalEscribirCaracter(&secEscr,' ');
-        secPalLeer(&secLect);
+        if(secPalLeer(&secLect, &pal))
+        {
+            secPalEscribirCaracter(&secEscr,' ');
+        }
     }
     secPalCerrar(&secEscr);
     return cadDest;

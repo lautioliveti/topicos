@@ -1,4 +1,5 @@
-#include "secuencia.h"
+#include "sencuencia.h"
+#define esLetra(c) (((c) >= 'A' && (c) <= 'Z')|| ( (c)>='a' &&  (c)<='z' ))
 
 
 void secPalCrear(SecPal* sec, char* cad){
@@ -33,13 +34,32 @@ bool secPalLeer(SecPal* sec, Palabra* pal)
 }
 
 bool secPalEscribir(SecPal* sec, const Palabra* pal){
-    char* i = pal->vPal;
+    const char* i = pal->vPal;
+
     while(*i) // while(*i != '\0')
     {
         *sec->cursor= *i;
-        i++;
         sec->cursor++;
+        i++;
     }
 
+    return true;
 }
-bool secPalFin(SecPal* sec);
+// se agrega ese campo en cuando creo le paso ese parámetro, cuando creo la secuencia.
+// Y bueno, tengo que controlar que el cursor no se pase de la dirección del último. Puedo calcular cuál es el último.La última dirección válida del vector
+//. Y van a ver que el cursor no se pase de ese valor.
+bool secPalEscribirCaracter(SecPal *sec,char c)
+{
+    *sec->cursor = c;
+    sec->cursor++;
+
+    return true;
+}
+bool secPalFin(const SecPal* sec)
+{
+    return sec->finSec;
+}
+void secPalCerrar(SecPal* sec)
+{
+    *sec->cursor= '\0';
+}

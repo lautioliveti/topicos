@@ -34,9 +34,14 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="main.c">
+		<Unit filename="palabra.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="palabra.h" />
+		<Unit filename="secuencia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sencuencia.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

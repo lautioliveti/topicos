@@ -11,9 +11,13 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters='&quot;*(&amp;)( ))_+cAdeNa$%^# %^a$%^ $%^noRMalIzAR!#$%@#&quot;' />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="../SecuenciaPalabras/bin/Debug/libSecuenciaPalabras.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Normalizar" prefix_auto="1" extension_auto="1" />

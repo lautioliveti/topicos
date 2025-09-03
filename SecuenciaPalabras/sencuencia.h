@@ -12,7 +12,8 @@ typedef struct{
 void secPalCrear(SecPal* secPal, char* cad);
 bool secPalLeer(SecPal* sec, Palabra* pal);
 bool secPalEscribir(SecPal* sec, const Palabra* pal);
-bool secPalFin(SecPal* sec);
-
+bool secPalFin(const SecPal* sec);
+bool secPalEscribirCaracter(SecPal *sec,char c);
+void secPalCerrar(SecPal* sec);
 
 #endif // SENCUENCIA_H_INCLUDED

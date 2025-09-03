@@ -3,6 +3,7 @@
 
 #define TAM_PALABRA 30
 
+
 typedef struct{
     char vPal[TAM_PALABRA +1]; // el 1 es por el caracter nulo
     
