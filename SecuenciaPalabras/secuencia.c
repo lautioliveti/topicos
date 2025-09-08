@@ -33,6 +33,8 @@ bool secPalLeer(SecPal* sec, Palabra* pal)
 
 }
 
+
+
 bool secPalEscribir(SecPal* sec, const Palabra* pal){
     const char* i = pal->vPal;
 

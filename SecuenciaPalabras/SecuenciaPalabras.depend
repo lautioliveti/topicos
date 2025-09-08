@@ -1,6 +1,13 @@
 # depslib dependency file v1.0
-1756856580 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\palabra.c
+1757357852 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\palabra.c
 	"palabra.h"
 
 1756856216 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\palabra.h
+
+1756858534 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\secuencia.c
+	"sencuencia.h"
+
+1756856598 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\sencuencia.h
+	<stdbool.h>
+	"palabra.h"
 

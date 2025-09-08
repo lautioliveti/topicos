@@ -14,3 +14,41 @@ void palabraTitulo(Palabra* pal)
         i++;
     }
 }
+
+int palabraContarLetra(Palabra* pal)
+{
+    int cont=0;
+    char* i = pal->vPal;
+    while(*i != '\0')
+    {
+        cont++;
+        i++;
+    }
+    return cont;
+}
+
+
+void palabraToLower(Palabra* pal)
+{
+    char* i = pal->vPal;
+    while( *i != '\0')
+    {
+        *i=aMinus(*i);
+        i++;
+    }
+}
+
+void palabraMostrar(Palabra* pal)
+{
+    puts(pal->vPal);
+}
+
+void palabraToUpper(Palabra* pal)
+{
+    char* i = pal->vPal;
+    while( *i != '\0')
+    {
+        *i=aMayus(*i);
+        i++;
+    }
+}
