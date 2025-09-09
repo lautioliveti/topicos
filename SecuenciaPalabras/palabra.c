@@ -1,4 +1,6 @@
 #include "palabra.h"
+#include <stdio.h>
+
 
 #define aMayus(c) ((c)>='a' && (c)<='z' ? (c)-('a'-'A'): (c)) //me fijo si es minuscula. si es sumo la dif de ascii
 #define aMinus(c) ((c)>='A'&& (c)<='Z' ? (c)+ ('a'-'A'):(c))

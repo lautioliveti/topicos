@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../SecuenciaPalabras/sencuencia.h"
+#include "../SecuenciaPalabras/palabra.h"
 
 #define TAM 101
 
 char* normalizar(const char* cadOrigin, char* cadDest);
 // Normalizar.exe "*(&)( ))_+cAdeNa$%^# %^a$%^ $%^noRMalIzAR!#$%@#"
 int contarPalabras(const char* cadOrigin);
+Palabra palabraMasLarga(char* cadOrigin);
 
 int main(int argc, char* argv[])
 {
@@ -19,7 +21,9 @@ int main(int argc, char* argv[])
 
     printf("%d",contarPalabras(cadNormalizada));
 
-    palabraMostrar(&palabraMasLarga(cadNormalizada));
+    Palabra pal=palabraMasLarga(cadNormalizada);
+
+    palabraMostrar(&pal);
 
     return 0;
 }
@@ -49,7 +53,7 @@ char* normalizar(const char* cadOrigin, char* cadDest)
 // La palabra mas larga
 // hacer las funciones de string.h
 
-Palabra palabraMasLarga(const char* cadOrigin)
+Palabra palabraMasLarga(char* cadOrigin)
 {
     SecPal secLect;
     secPalCrear(&secLect, (char*)cadOrigin);
@@ -70,7 +74,7 @@ Palabra palabraMasLarga(const char* cadOrigin)
          secPalLeer(&secLect, &pal);
     }
 
-    return palMasLarga; 
+    return palMasLarga;
 
 }
 

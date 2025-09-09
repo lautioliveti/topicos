@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1757364872 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\normalizar\main.c
+1757423010 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\normalizar\main.c
 	<stdio.h>
 	<stdlib.h>
 	"../SecuenciaPalabras/sencuencia.h"
+	"../SecuenciaPalabras/palabra.h"
 
 1756856598 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\sencuencia.h
 	<stdbool.h>
 	"palabra.h"
 
-1757364806 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\palabra.h
+1757365539 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\secuenciapalabras\palabra.h
 
