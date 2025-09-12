@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1757711527 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\mistring\string.c
+	"string.h"
+
+1757710695 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\mistring\string.h
+	<stdio.h>
+

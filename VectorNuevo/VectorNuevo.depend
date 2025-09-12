@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1756262133 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\vector\vector.c
+	"vector.h"
+	<stdbool.h>
+
+1756259948 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\vector\vector.h
+	<stdbool.h>
+	<stdio.h>
+
