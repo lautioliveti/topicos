@@ -16,15 +16,17 @@
 #define ERR_SIN_MEM 3
 
 
-#define TODO_OK 0
-#define LLENO 1
-#define DUPLICADO 2
+#define BURBUJEO 1
+#define SELECCION 2
+#define INSERCION 3
 
 typedef struct{
     int* vec;
     size_t ce;
     size_t  cap;
 }Vector;
+
+
 bool vectorCrear(Vector* vector);
 int vectorOrdInsertar(Vector* vector, int elem);
 int vectorOrdBuscar(Vector* vector, int elem); //busquedabinaria
@@ -32,6 +34,6 @@ bool vectorEliminarDePos(Vector* vector, int pos);
 bool vectorEliminarElem(Vector* vector, int elem);
 void vectorVaciar(Vector* vector);
 void vectorDestruir(Vector* vector);
-
+void vectorOrdenar(Vector* vector, int metodo);
 
 #endif // VECTOR_H

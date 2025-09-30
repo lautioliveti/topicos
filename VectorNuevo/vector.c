@@ -2,6 +2,11 @@
 #include <stdbool.h>
 
 bool redimensionarVector(Vector* vector, float factor);
+void intercambiar(int* a, int* b);
+void ordenarBurbujeo(Vector* vector);
+void ordenarSeleccion(Vector* vector);
+void ordenarInsercion(Vector* vector);
+
 
 bool vectorCrear(Vector* vector)
 {
@@ -162,3 +167,86 @@ bool redimensionarVector(Vector* vector, float factor)
     return true;
 }
 
+void vectorOrdenar(Vector* vector, int metodo)
+{
+    switch(metodo)
+    {
+    case BURBUJEO:
+        ordenarBurbujeo(vector);
+        break;
+
+    case SELECCION:
+        ordenarSeleccion(vector);
+        break;
+
+    case INSERCION:
+        ordenarInsercion(vector);
+        break;
+    }
+}
+
+
+void ordenarBurbujeo(Vector* vector)
+{
+    for(int i = 1, *limJ = vector->vec + vector->ce - 2; i < vector->ce; i++, limJ--)
+    {
+        for(int* j = vector->vec; j <= limJ; j++)
+        {
+            if(*j > *(j + 1))
+            {
+                intercambiar(j, j + 1);
+            }
+        }
+    }
+}
+
+
+void ordenarSeleccion(Vector* vector)
+{
+    int* ult = vector->vec + vector->ce - 1;
+    int* m;
+    for(int* i = vector->vec; i < ult; i++)
+    {
+        m = i;
+        for(int* j = i + 1; j <= ult; j++)
+        {
+            if(*j < *m)
+            {
+                m = j;
+            }
+        }
+
+        if(m != i)
+        {
+            intercambiar(m, i);
+        }
+    }
+
+}
+
+
+void ordenarInsercion(Vector* vector)
+{
+    int* ult = vector->vec + vector->ce - 1;
+    int* j;
+    int elemAIns;
+    for(int* i = vector->vec + 1; i <= ult; i++)
+    {
+        j = i - 1;
+        elemAIns = *i;
+
+        while(j >= vector->vec && elemAIns < *j)
+        {
+            *(j + 1) = *j;
+            j--;
+        }
+
+        *(j + 1) = elemAIns;
+    }
+}
+void intercambiar(int* a, int* b)
+{
+    int aTemp = *a;
+    *a = *b;
+    *b = aTemp;
+}

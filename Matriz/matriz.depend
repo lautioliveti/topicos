@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1759236568 source:c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\matriz\matriz.c
+	"matriz.h"
+
+1759236568 c:\users\lauti\onedrive\desktop\topicosinvierno\clase1\matriz\matriz.h
+	<stdio.h>
+	<stdlib.h>
+

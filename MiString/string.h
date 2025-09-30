@@ -11,5 +11,7 @@ void mi_strcpy(char* str, const char* str2);
 int mi_strcmp(const char* str, const char* str2);
 int mi_strcmpi(const char* str,const char* str2);
 char* mi_strncat (char* str, const char* str2,int n);
+char* cambiarIncitu(char* str);
+int esPalindromo(const char* str);
 
 #endif // STRING_H_INCLUDED

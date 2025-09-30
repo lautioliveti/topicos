@@ -99,3 +99,55 @@ char* mi_strncat (char* str, const char* str2,int n)
     return str;
 
 }
+
+char* cambiarIncitu(char* str)
+{
+    char* pi=(char*)str;
+    char* pf=(char*)str;
+    char aux;
+    while(*pf!='\0')
+        pf++;
+    pf--;
+    while(pi<pf)
+    {
+        aux=*pi;
+        *pi=*pf;
+        *pf=aux;
+        pi++;
+        pf--;
+    }
+    return str;
+}
+
+int esPalindromo(const char* str)
+{
+    char* pi=(char*)str;
+    char* pf=(char*)str;
+
+    while(*pf!='\0')
+        pf++;
+    pf--;
+
+    int aux=aMayus(*pi)-aMayus(*pf);
+    while(pi<pf)
+    {
+        while(*pi==' ')
+            pi++;
+        while(*pf==' ')
+            pf--;
+        aux=aMayus(*pi)-aMayus(*pf);
+        if(aux==0)
+        {
+            pi++;
+            pf--;
+        }
+        else
+        {
+            return 0;
+        }
+
+
+    }
+    return 1;
+}
+
